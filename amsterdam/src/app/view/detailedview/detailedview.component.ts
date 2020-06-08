@@ -9,25 +9,45 @@ import { IEstablishment } from 'src/app/model';
   styleUrls: ['./detailedview.component.css']
 })
 export class DetailedviewComponent implements OnInit {
-  private iEstablishmentDetails: IEstablishment;
+  title = 'amsterdam';
+  name = '';
+  city = '';
+  zipcode = 0;
+  startdate=0;
+
+  establishment: IEstablishment[] = [];
+  events: IEstablishment[] = [];
+  totalEstablishment: number;
+  totalEvents: number;
+/// ===========================================
+
+  public iEstablishmentDetails: IEstablishment;
   constructor(private viewdataService: VenuesService, private _router:Router) { }
-  ngOnInit() { this.iEstablishmentDetails=this.viewdataService.getter();  }
+  ngOnInit() 
+  { this.iEstablishmentDetails=this.viewdataService.getter(); 
+  console.log(this.iEstablishmentDetails); }
 
 
   completeForm(){ 
-    // Test the presence/absence of a worker
+    // Test the presence/absence 
         if(this.iEstablishmentDetails==undefined){
           console.log(this.viewdataService)
             this._router.navigate(['/']); }
         else
         {
-    // Both update and create worker
-    this.viewdataService.saveOrUpdateItem(this.iEstablishmentDetails).subscribe((worker)=>{console.log(worker);
+    // Both update 
+    this.viewdataService.saveOrUpdateItem(this.iEstablishmentDetails)
+    .subscribe((iEstablishmentDetails)=>{console.log(iEstablishmentDetails);
     this._router.navigate(['/']);},(error)=>{ console.log(error); });
+
+    // Both update and create worker
+   // this._userService.saveOrUpdateItem(this.worker).subscribe((worker)=>{console.log(worker);
+   //   this._rotuer.navigate(['/']);},(error)=>{ console.log(error); });
 }
   }
  // Double
- saveOrUpdateItem2(){  
+ // viewDetails(established)
+ viewAllVenues(){  
  // this.viewdataService.setter(worker);
   this._router.navigate(['/']);   }
 

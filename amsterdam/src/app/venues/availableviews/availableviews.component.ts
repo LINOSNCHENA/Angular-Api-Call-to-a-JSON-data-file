@@ -15,7 +15,7 @@ export class AvailableviewsComponent implements OnInit {
   city = '';
   zipcode = 0;
   startdate=0;
-
+  private workers: IEstablishment[];// Worker[];
   establishment: IEstablishment[] = [];
   events: IEstablishment[] = [];
   totalEstablishment: number;
@@ -51,8 +51,8 @@ viewDetails(iEstablishment: any){
  }
 
  // Double
-saveOrUpdateItem(worker){  
-  this.dataService.setter(worker);
-  this._router.navigate(['/enrolls']);   }
+//saveOrUpdateItem(worker){  
+ // this.dataService.setter(worker);
+ // this._router.navigate(['/enrolls']);   }
 
 }

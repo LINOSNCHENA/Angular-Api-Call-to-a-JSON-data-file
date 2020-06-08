@@ -19,14 +19,10 @@
           </label>
           <label for="city">
             City: <input type="text" [(ngModel)]="city">
-        
-          <br> <br>
+                  <br> <br>
   
-          <p>
-            Total Number of Establishments-: {{totalEstablishment}}        </p>
-          <p>
-            Total Number of Venue Events  -: {{totalEvents}}
-          </p>
+          <p>Total Number of Establishments-: {{totalEstablishment}}</p>
+          <p>Total Number of Venue Events  -: {{totalEvents}}</p>
         </label>
    
         </div>
@@ -51,9 +47,8 @@
             <td>{{established.location.zipcode}}</td>
             <td>{{established.location.city}}</td>
             <td>{{established.dates.startdate}}</td>
-            <td>
-              <button class="btn btn-primary" (click)="viewDetails(worker)">View Details</button>
-          </td>
+            <td><button class="btn btn-primary" 
+              (click)="viewDetails(established)">View Details</button></td>
           </tr>
   
         </table>
