@@ -32,30 +32,22 @@
     [(ngModel)]="iEstablishmentDetails.location.zipcode">
 </div>
 
-<div class="form group">
-  <label for="name"> FULL-NAME</label>
-  <input type="text" name="name"  class="form-control" 
-  [(ngModel)]="iEstablishmentDetails.location.name">
-</div>
-   
     <div class="form group">
         <label for="startdate">STARTDATE</label>
         <input type="text" name="startdate" class="form-control" 
         [(ngModel)]="iEstablishmentDetails.dates.startdate">
     </div>
+
 </form>
 
 
 <div>
 
-  <div class="container">
-   
-    <h3> SELECT VENUE DETAILS IN AMSTERDAM </h3>
-  
+  <div class="container">   
+    <h3> SELECT VENUE DETAILS IN AMSTERDAM </h3>  
     <div class="row form-row">
       <div class="col-12">
-           <div class="form-search text-center">
-  
+           <div class="form-search text-center">  
           <label for="name">
             <br>
             Name:<input type="text" [(ngModel)]="name">
@@ -68,8 +60,7 @@
            ZIPCode:<input type="text" [(ngModel)]="zipcode">
           </label>
           <label for="city">
-            City: <input type="text" [(ngModel)]="city">
-        
+            City: <input type="text" [(ngModel)]="city">        
           <br> <br>
   
           <p>
@@ -94,7 +85,7 @@
           <th> StartDate</th>
           <th> Action</th>
 
-          <tr *ngFor="let established of iEstablishmentDetails  ; index as i">
+          <tr *ngFor="let established of establishment  ; index as i">
             <td>{{i+1}}</td>
             <td>{{established.trcid}}</td>     
             <td>{{established.location.name}}</td>       

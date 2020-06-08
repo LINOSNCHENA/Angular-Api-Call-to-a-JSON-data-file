@@ -14,41 +14,51 @@ export class DetailedviewComponent implements OnInit {
   city = '';
   zipcode = 0;
   startdate=0;
+ 
+  iEstablishmentDetails: IEstablishment;  // SINGLE
+  establishment: IEstablishment[] = [];   // Multiple
+  
+  iEvents: IEstablishment;                // Single
+  events: IEstablishment[] = [];          // Multiple
 
-  establishment: IEstablishment[] = [];
-  events: IEstablishment[] = [];
   totalEstablishment: number;
   totalEvents: number;
-/// ===========================================
 
-  public iEstablishmentDetails: IEstablishment;
+
+  //------------------------------------------
   constructor(private viewdataService: VenuesService, private _router:Router) { }
   ngOnInit() 
   { this.iEstablishmentDetails=this.viewdataService.getter(); 
-  console.log(this.iEstablishmentDetails); }
+    this.viewdataService.getEstablishment().subscribe(
+      (dataSet1: any) => {
+        this.establishment = dataSet1;
+        this.totalEstablishment=this.establishment.length;   
+      console.log(this.iEstablishmentDetails);
+      console.log(this.establishment);
+    
+    }
+    );
+      console.log(this.iEstablishmentDetails);
+
+ }
 
 
   completeForm(){ 
-    // Test the presence/absence 
-        if(this.iEstablishmentDetails==undefined){
-          console.log(this.viewdataService)
-            this._router.navigate(['/']); }
+    // Test the presence/absence of a record
+        if(this.iEstablishmentDetails==undefined)
+        {
+          this._router.navigate(['/']); }
         else
         {
     // Both update 
     this.viewdataService.saveOrUpdateItem(this.iEstablishmentDetails)
     .subscribe((iEstablishmentDetails)=>{console.log(iEstablishmentDetails);
     this._router.navigate(['/']);},(error)=>{ console.log(error); });
-
-    // Both update and create worker
-   // this._userService.saveOrUpdateItem(this.worker).subscribe((worker)=>{console.log(worker);
-   //   this._rotuer.navigate(['/']);},(error)=>{ console.log(error); });
 }
   }
- // Double
- // viewDetails(established)
- viewAllVenues(){  
- // this.viewdataService.setter(worker);
+
+ viewAllVenues()
+ {  
   this._router.navigate(['/']);   }
 
 }

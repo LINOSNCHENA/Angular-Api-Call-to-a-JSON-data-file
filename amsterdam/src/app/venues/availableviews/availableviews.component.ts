@@ -46,13 +46,6 @@ export class AvailableviewsComponent implements OnInit {
 
 viewDetails(iEstablishment: any){  
   this.dataService.setter(iEstablishment);
-  console.log(this.iEstablishment)
   this._router.navigate(['/enrolls']);  
  }
-
- // Double
-//saveOrUpdateItem(worker){  
- // this.dataService.setter(worker);
- // this._router.navigate(['/enrolls']);   }
-
 }
