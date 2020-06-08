@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
 import { VenuesService } from './venues.service';
+
 interface IEstablishment {
-  location :{
+  location :
+  {
   startdate: string;
   name: string;
   city: string;
-  zipcode: string;}
+  zipcode: string;
+}
 }
 
 @Component({
@@ -21,18 +24,26 @@ export class AppComponent {
   startdate=0;
 
 
-  empData2: IEstablishment[] = [];
+  establishment: IEstablishment[] = [];
+  events: IEstablishment[] = [];
 
   constructor(private dataService: VenuesService) { }
 
   ngOnInit() {
 
   this.dataService.getEstablishment().subscribe(
-    (data2: any) => {
-      this.empData2 = data2;
-      console.log(this.empData2.length+" - :Brno2020")
-      console.log(this.empData2)
+    (dataSet1: any) => {
+      this.establishment = dataSet1;
+       console.log(this.establishment)
     }
   );
+  
+  this.dataService.getEvents().subscribe(
+    (dataSet2: any) => {
+      this.events = dataSet2;
+      console.log(this.events)
+    }
+  );
+
 }
 }
