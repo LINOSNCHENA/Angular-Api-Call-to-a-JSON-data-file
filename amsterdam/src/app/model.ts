@@ -1,5 +1,7 @@
 export interface IEstablishment {  // FOUR ELEMENTS
-    location :
+   
+    trcid: string;
+    location:
     {
     name: string;
     city: string;

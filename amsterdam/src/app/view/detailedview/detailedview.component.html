@@ -1,0 +1,133 @@
+<!-- <br>
+<header class="masthead bg-primary text-white text-center">
+  <div class="container"><br>
+    <h2 class="text-uppercase mb-0">Details about selected Venue </h2>
+    <hr class="star-light">
+  </div>
+</header>
+
+<div class="container">
+
+    <form (ngSubmit) = "completeForm()">
+      <div class="form group">
+      <label for="id"> View for records in database</label> 
+    </div>  
+
+    <div class="form group">
+        <label for="name"> FULL-NAME</label>
+        <input type="text" name="name"  class="form-control" [(ngModel)]="worker.location.name">
+    </div>
+
+    <div class="form group">
+        <label for="city">CITY </label> 
+        <select name="city"  class="form-control" [(ngModel)]="worker.location.city">
+          <option value="Administrator">Administrator</option>
+          <option value="Lecturer">Lecturer</option>
+          <option value="Contractor">Contractor</option>
+          <option value="Labourer">Labourer</option>       
+          <option value="others">Others- Please Specify Below</option></select>
+    </div>  
+    
+    <div class="form group">
+        <label for="zipcode">POSTCODE</label>
+        <select name="zipcode"  class="form-control" [(ngModel)]="worker.location.zipcode">
+          <option value="computing">Computing</option>
+          <option value="Accounting">Accounting</option>
+          <option value="Humanresource">Human Resource</option>
+          <option value="Finance">Finance</option>       
+          <option value="others">Others- Please Specify Below</option></select>
+    </div>
+
+    <div class="form group">
+      <label for="adress">ADDRESS</label>
+      <select name="adress"  class="form-control" [(ngModel)]="worker.location.adress">
+        <option value="Permanent">permanent</option>
+        <option value="Part-time">part-time</option>
+        <option value="Contractor">contractor</option>
+        <option value="Visitor">visitor</option>       
+        <option value="others">Others- Please Specify Below</option></select>
+    </div>  
+    
+    <div class="form group">
+        <label for="startdate">STARTDATE</label>
+        <input type="text" name="startdate" class="form-control" [(ngModel)]="worker.dates.startdate">
+    </div>
+
+ 
+
+<br><br>
+    <button class="btn btn-primary" (click)="viewVenues()">View ALL Venues1</button>
+    <button class="btn btn-primary" (click)="saveOrUpdateItem()">View ALL Venues2</button>
+    
+    </form>
+  </div> -->
+
+
+
+
+  <div class="container">
+   
+    <h3> SELECT VENUE DETAILS IN AMSTERDAM </h3>
+  
+    <div class="row form-row">
+      <div class="col-12">
+           <div class="form-search text-center">
+  
+          <label for="name">
+            <br>
+            Name:<input type="text" [(ngModel)]="name">
+          </label>
+          <label for="startdate">
+            Start Year:<input type="text" [(ngModel)]="startdate">
+          </label>
+          <br> <br>
+          <label for="zipcode">
+           ZIPCode:<input type="text" [(ngModel)]="zipcode">
+          </label>
+          <label for="city">
+            City: <input type="text" [(ngModel)]="city">
+        
+          <br> <br>
+  
+          <p>
+            Total Number of Establishments-: {{totalEstablishment}}        </p>
+          <p>
+            Total Number of Venue Events  -: {{totalEvents}}
+          </p>
+        </label>
+   
+        </div>
+      </div>
+    </div> 
+  
+    <div class="row table-row">
+      <div class="col-12">
+        <table class="table-bordered">
+          <th> no.    </th>
+          <th> ID    </th>
+          <th> Name     </th>
+          <th> Zipcode  </th>
+          <th> City     </th>
+          <th> StartDate</th>
+          <th> Action</th>
+
+          <tr *ngFor="let established of iEstablishmentDetails  ; index as i">
+            <td>{{i+1}}</td>
+            <td>{{established.trcid}}</td>     
+            <td>{{established.location.name}}</td>       
+            <td>{{established.location.zipcode}}</td>
+            <td>{{established.location.city}}</td>
+            <td>{{established.dates.startdate}}</td>
+            <td>
+              <button class="btn btn-primary" (click)="viewDetails(worker)">View Details</button>
+          </td>
+          </tr>
+  
+        </table>
+      </div>
+    </div>
+  </div>
+  
+  <br><br>
+   
+    <button class="btn btn-primary" (click)="saveOrUpdateItem2()">View ALL Venues2</button>

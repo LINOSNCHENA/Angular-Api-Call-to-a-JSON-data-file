@@ -10,38 +10,7 @@ import { IEstablishment } from './model';
 })
 export class AppComponent {
   title = 'amsterdam';
-  name = '';
-  city = '';
-  zipcode = 0;
-  startdate=0;
+ 
 
-  establishment: IEstablishment[] = [];
-  events: IEstablishment[] = [];
-  totalEstablishment: number;
-  totalEvents: number;
-
-  constructor(private dataService: VenuesService, private _router:Router) { }
-
-  ngOnInit() {
-  this.dataService.getEstablishment().subscribe(
-    (dataSet1: any) => {
-      this.establishment = dataSet1;
-       console.log(this.establishment);
-       this.totalEstablishment=this.establishment.length;    }
-  );
-  
-  this.dataService.getEvents().subscribe(
-    (dataSet2: any) => {
-      this.events = dataSet2;
-      console.log(this.events)
-      this.totalEvents=this.events.length
-    }
-  );
-}
-
-viewDetails(myEstablishment: any){  
-  this.dataService.setter(myEstablishment);
-  this._router.navigate(['/enrolls']);  
- }
 
 }
