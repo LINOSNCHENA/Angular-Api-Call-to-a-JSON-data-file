@@ -1,7 +1,6 @@
-export interface IEstablishment {
+export interface IEstablishment {  // FOUR ELEMENTS
     location :
     {
-    startdate: string;
     name: string;
     city: string;
     zipcode: string;

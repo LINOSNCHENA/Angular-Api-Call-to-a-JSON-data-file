@@ -1,6 +1,6 @@
 <div class="container">
  
-  <h3> Data for Dinning and Resturants in Amsterdam </h3>
+  <h3> DATA FOR LOCATING ESTABLISHMENTS AND EVENTS IN AMSTERDAM </h3>
 
   <div class="row form-row">
     <div class="col-12">
@@ -23,9 +23,9 @@
         <br> <br>
 
         <p>
-          Total Number of Establishments {{totalV2}}        </p>
+          Total Number of Establishments-: {{totalEstablishment}}        </p>
         <p>
-          Total Number of Events {{totalV2}}
+          Total Number of Venue Events  -: {{totalEvents}}
         </p>
       </label>
  
@@ -36,24 +36,18 @@
   <div class="row table-row">
     <div class="col-12">
       <table class="table-bordered">
-        <th>
-          ID
-        </th>
-        <th>
-          Name
-        </th>
-        <th>
-          City
-        </th>
-        <th>
-          Addresss
-        </th>
+        <th>   ID  </th>
+        <th>  Name </th>
+        <th>Zipcode </th>
+        <th> City </th>
+        <th> StartDate</th>
         <th> Action</th>
         <tr *ngFor="let established of establishment  ; index as i">
           <td>{{i+1}}</td>
-          <td>{{established.location.name}}</td>
-          <td>{{established.location.city}}</td>
+          <td>{{established.location.name}}</td>         
           <td>{{established.location.zipcode}}</td>
+          <td>{{established.location.city}}</td>
+          <td>{{established.dates.startdate}}</td>
           <td>
             <button class="btn btn-primary" (click)="viewDetails(establishment)">View Details</button>
         </td>

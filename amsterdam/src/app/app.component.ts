@@ -17,8 +17,8 @@ export class AppComponent {
 
   establishment: IEstablishment[] = [];
   events: IEstablishment[] = [];
-  totalV1: number;
-  totalV2: number;
+  totalEstablishment: number;
+  totalEvents: number;
 
   constructor(private dataService: VenuesService, private _router:Router) { }
 
@@ -27,14 +27,14 @@ export class AppComponent {
     (dataSet1: any) => {
       this.establishment = dataSet1;
        console.log(this.establishment);
-       this.totalV1=this.establishment.length;    }
+       this.totalEstablishment=this.establishment.length;    }
   );
   
   this.dataService.getEvents().subscribe(
     (dataSet2: any) => {
       this.events = dataSet2;
       console.log(this.events)
-      this.totalV2=this.establishment.length
+      this.totalEvents=this.events.length
     }
   );
 }
