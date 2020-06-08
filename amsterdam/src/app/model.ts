@@ -8,4 +8,6 @@ export interface IEstablishment {  // FOUR ELEMENTS
     zipcode: string;
   }
   dates: { startdate: string;}
+  urls:{}
+  media:{}
   }
