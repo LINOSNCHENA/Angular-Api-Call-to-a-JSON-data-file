@@ -1,108 +1,76 @@
-<br>
-<header class="masthead bg-primary text-white text-center">
-  <div class="container"><br>
-    <h2 class="text-uppercase mb-0">Details about selected Venue </h2>
-    <hr class="star-light">
-  </div>
-</header>
-
 <div class="container">
+  <h3> SELECT VENUE DETAILS IN AMSTERDAM </h3>
+  <div class="row form-row">
+    <div class="col-12">
+      <div class="form-search text-center">
 
-    <form (ngSubmit) = "completeForm()">
+        <label for="name">
+          <br>
+          Name:<input type="text" [(ngModel)]="name"></label>
 
-      <div class="form group">
-      <label for="id"> View for records in database</label> 
-    </div>  
+        <label for="startdate">
+          Start Year:<input type="text" [(ngModel)]="startdate"></label>
 
-    <div class="form group">
-        <label for="name"> FULL-NAME</label>
-        <input type="text" name="name"  class="form-control" 
-        [(ngModel)]="iEstablishmentDetails.location.name">
-    </div>
+        <br> <br>
+        <label for="zipcode">
+          ZIPCode:<input type="text" [(ngModel)]="zipcode"></label>
 
-    <div class="form group">
-      <label for="city"> CITY</label>
-      <input type="text" name="city"  class="form-control" 
-      [(ngModel)]="iEstablishmentDetails.location.city">
+        <label for="city">
+          City: <input type="text" [(ngModel)]="city"></label>
+          <br> <br>
+
+
+          <div class="form group">
+            <label for="id"> View for records in database 1</label>
+          </div>
+
+          <div class="form group">
+            <label for="name"> FULL-NAME2</label>
+            <input type="text" name="name" class="form-control" 
+            [(ngModel)]="iEstablishmentDetails.location.name">
+          </div>
+
+          <div class="form group">
+            <label for="cityx"> CITY3</label>
+            <input type="text" name="cityx" class="form-control" 
+            [(ngModel)]="iEstablishmentDetails.location.city">
+          </div>
+
+          <div class="form group">
+            <label for="zipcode"> ZIPCODE4</label>
+            <input type="text" name="zipcode" class="form-control" 
+            [(ngModel)]="iEstablishmentDetails.location.zipcode">
+          </div>
+
+          <div class="form group">
+            <label for="startdate">STARTDATE5</label>
+            <input type="text" name="startdate" class="form-control"
+              [(ngModel)]="iEstablishmentDetails.dates.startdate">
+          </div>
+        </div>
+
+
+
+<div class="row table-row">
+  <div class="col-12">
+    <table class="table-bordered">
+      <th> no. </th> <th> ID </th> <th> Name </th>
+      <th> Zipcode </th> <th> City </th>  <th> StartDate</th><th> Action</th>
+      <tr *ngFor="let established of establishment  ; index as i">
+        <td>{{i+1}}</td><td>{{established.trcid}}</td>
+        <td>{{established.location.name}}</td>
+        <td>{{established.location.zipcode}}</td>
+        <td>{{established.location.city}}</td>
+        <td>{{established.dates.startdate}}</td>
+        <td> <button class="btn btn-primary" 
+          (click)="viewAllVenues()">View Details #1</button> </td>
+      </tr>
+    </table>
   </div>
-
-  <div class="form group">
-    <label for="zipcode"> ZIPCODE</label>
-    <input type="text" name="zipcode"  class="form-control" 
-    [(ngModel)]="iEstablishmentDetails.location.zipcode">
 </div>
 
-    <div class="form group">
-        <label for="startdate">STARTDATE</label>
-        <input type="text" name="startdate" class="form-control" 
-        [(ngModel)]="iEstablishmentDetails.dates.startdate">
-    </div>
 
-</form>
-
-
+<br><br>
 <div>
-
-  <div class="container">   
-    <h3> SELECT VENUE DETAILS IN AMSTERDAM </h3>  
-    <div class="row form-row">
-      <div class="col-12">
-           <div class="form-search text-center">  
-          <label for="name">
-            <br>
-            Name:<input type="text" [(ngModel)]="name">
-          </label>
-          <label for="startdate">
-            Start Year:<input type="text" [(ngModel)]="startdate">
-          </label>
-          <br> <br>
-          <label for="zipcode">
-           ZIPCode:<input type="text" [(ngModel)]="zipcode">
-          </label>
-          <label for="city">
-            City: <input type="text" [(ngModel)]="city">        
-          <br> <br>
-  
-          <p>
-            Total Number of Establishments-: {{totalEstablishment}}        </p>
-          <p>
-            Total Number of Venue Events  -: {{totalEvents}}
-          </p>
-        </label>
-   
-        </div>
-      </div>
-    </div> 
-  
-    <div class="row table-row">
-      <div class="col-12">
-        <table class="table-bordered">
-          <th> no.    </th>
-          <th> ID    </th>
-          <th> Name     </th>
-          <th> Zipcode  </th>
-          <th> City     </th>
-          <th> StartDate</th>
-          <th> Action</th>
-
-          <tr *ngFor="let established of establishment  ; index as i">
-            <td>{{i+1}}</td>
-            <td>{{established.trcid}}</td>     
-            <td>{{established.location.name}}</td>       
-            <td>{{established.location.zipcode}}</td>
-            <td>{{established.location.city}}</td>
-            <td>{{established.dates.startdate}}</td>
-            <td>
-              <button class="btn btn-primary" (click)="viewAllVenues()">View Details #1</button>
-          </td>
-          </tr>
-  
-        </table>
-      </div>
-    </div>
-  </div>
-  
-  <br><br>
-   
-    <button class="btn btn-primary" (click)="viewAllVenues()">Back to Venues #2</button>      
+<button class="btn btn-primary" (click)="viewAllVenues()">Back to Venues #2</button>
 </div>
