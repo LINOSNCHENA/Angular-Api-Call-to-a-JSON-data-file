@@ -10,8 +10,8 @@
           <br>
           Name:<input type="text" [(ngModel)]="name">
         </label>
-        <label for="startdate">
-          Start Year:<input type="text" [(ngModel)]="startdate">
+        <label for="adress">
+          Addres:<input type="text" [(ngModel)]="address">
         </label>
         <br> <br>
 
@@ -49,7 +49,7 @@
         <th> picture</th>
         <th> snap</th> -->
         <th> Action</th>
-        <tr *ngFor="let established of establishment | filter: name : city ; index as i">
+        <tr *ngFor="let established of establishment | filter: name :zipcode:adress: city ; index as i">
           <td>{{i+1}}</td>
           <td>{{established.location.name}}</td>
           <td>{{established.location.city}}</td>
@@ -58,7 +58,7 @@
           <td>{{established.location.adress}}</td>
           <!-- <td>{{established.urls[0]}}</td> -->
           <!-- <td> <img src={{established.media.url}} alt="{{established.trcid}}" /> </td>
-          <td><img [src]="established.media.url" alt="image"></td> -->
+          <td><img [src]="established.media.url" alt="image"></td>  -->
           <td><button class="btn btn-primary" (click)="viewDetails(established)">Estab-Details</button></td>
         </tr>
         <tr *ngFor="let establish of events | filter: name : city ; index as i">
