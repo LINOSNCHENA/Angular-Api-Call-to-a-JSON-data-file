@@ -12,7 +12,7 @@ Events Venues in the city of Amsterdam
 ## Pending Issues
 1. Testing not complete, time limited
 2. Bonus tasks, requirement not clear
-3. 
+3. code review
 
 ## Snapshots UI
 

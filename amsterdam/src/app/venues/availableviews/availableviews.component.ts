@@ -11,12 +11,12 @@ import { Router } from '@angular/router';
 export class AvailableviewsComponent implements OnInit {
 
   title = 'amsterdam';
-  name = '';
-  city = '';
-  zipcode = 0;
-  startdate = 0;
-  urls = '';
-  media = '';
+  name = 'x1';
+  city = 'x2';
+  zipcode = "i";
+  adress = "o";
+  urls = 'x';
+  media = 'x';
 
   establishment: IEstablishment[] = [];
   events: IEstablishment[] = [];
