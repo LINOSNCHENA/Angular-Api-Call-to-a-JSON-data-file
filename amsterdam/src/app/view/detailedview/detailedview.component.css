@@ -25,3 +25,14 @@ h3.headertext {
     background-color: cyan;
     margin: 20px;
   }
+
+  input {
+    /* box-sizing: border-box; */
+   /* height: 10%;
+   width: 50%; */
+   /* margin-left: 10px; */
+   display: block;
+   /* margin-left: 0 auto; */
+
+ 
+ }

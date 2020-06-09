@@ -21,5 +21,4 @@ Events Venues in the city of Amsterdam
 ![ Application Muntu Interface page #1 ](https://github.com/LINOSNCHENA/outOfAmsterdam/blob/master/amsterdam/src/assets/page%20(1).png)
 ![ Application Muntu Interface page #2 ](https://github.com/LINOSNCHENA/outOfAmsterdam/blob/master/amsterdam/src/assets/page%20(2).png)
 ![ Application Muntu Interface page #3 ](https://github.com/LINOSNCHENA/outOfAmsterdam/blob/master/amsterdam/src/assets/page%20(3).png)
-
 ![ Application Muntu Interface page #4 ](https://github.com/LINOSNCHENA/outOfAmsterdam/blob/master/amsterdam/src/assets/page%20(4).png)
