@@ -5,52 +5,46 @@
       <div class="form-search text-center">
 
         <br>
-        <hr />
-        Image of the Venue
+        <hr /> Image of the Venue
         <hr />
 
         <div>
           <a class="navbar-item">
-            <img alt="Foto (N/A) is absent-1-:" src="iEstablishmentDetails.media[0].url"  height="10%">
-            <img alt="Image not provided-2-:" src="./assets/page1.png" height="10%">
-          </a>          
+            <img alt="Foto (N/A) is absent-1-:" src="iEstablishmentDetails.media[0].url" height="10%"><br>
+            <img alt="Image not provided-2-:" src="./assets/page1.png" width="25%" height="10%">
+          </a>
         </div>
 
         <br>
         <label for="name"> Name1: </label>
         <input type="text" name="name" class="form-control" [(ngModel)]="iEstablishmentDetails.location.name">
-        <br> <br><br>
+        <br> <br>
 
         <label for="city"> City : </label>
         <input type="text" name="city" class="form-control" [(ngModel)]="iEstablishmentDetails.location.city">
-        <br> <br><br>
+        <br> <br>
 
         <label for="zipcode"> Zipcode</label>
         <input type="text" name="zipcode" class="form-control" [(ngModel)]="iEstablishmentDetails.location.zipcode">
-        <br> <br><br>
+        <br> <br>
 
         <label for="startdate">Startdate</label>
         <input type="text" name="startdate" class="form-control" [(ngModel)]="iEstablishmentDetails.dates.startdate">
-        <br> <br><br>
+        <br> <br>
 
         <label for="urls">Webpage-link</label>
         <input type="text" name="urls" class="form-control" [(ngModel)]="iEstablishmentDetails.urls">
-        <br> <br><br>
+        <br> <br>
 
         <label for="url"> Picture-Link</label>
         <input type="text" name="url" class="form-control" [(ngModel)]="iEstablishmentDetails.media[0].url">
-        <br>
-
       </div>
-
     </div>
+
     <h3 class="headertext">
-      <br>
       <button class="btn btn-primary" (click)="viewAllVenues()">Back to Venues </button>
-      <br>
     </h3>
 
-    <br><br>
-
+    <br>
   </div>
 </div>
