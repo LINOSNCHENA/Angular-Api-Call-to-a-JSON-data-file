@@ -8,34 +8,41 @@
         <hr /> Image of the Venue
         <hr />
 
+        <div *ngIf="!iEstablishmentDetails">
+          <a class="navbar-item">
+            <img src="assets/page1.png">
+          </a>
+         
+        </div>
+        <br> <br>
         <div>
           <a class="navbar-item">
-                     <img [src]="iEstablishmentDetails?.media[0]?.url" 
-                     alt="  Click Back to venues to choose a Venue" width="20%">
+            <img [src]="iEstablishmentDetails?.media[0]?.url" alt="  Click Back to venues to choose a Venue"
+              width="20%">
           </a>
         </div>
-<div *ngIf="iEstablishmentDetails">
-        <label for="name"> Name :
-        <input type="text" name="name" class="form-control"
-         [(ngModel)]="iEstablishmentDetails.location.name">
-      </label>
-        <label for="city"> City : </label>
-        <input type="text" name="city" class="form-control" [(ngModel)]="iEstablishmentDetails.location.city">
 
-        <label for="zipcode"> Zipcode : </label>
-        <input type="text" name="zipcode" class="form-control" [(ngModel)]="iEstablishmentDetails.location.zipcode">
-      
-        <label for="startdate">Start date : </label>
-        <input type="text" name="startdate" class="form-control" [(ngModel)]="iEstablishmentDetails.dates.startdate">
-    
-        <label for="urls">Webpage-link : </label>
-        <input type="text" name="urls" class="form-control" [(ngModel)]="iEstablishmentDetails.urls">
-    
-        <label for="url"> Picture-Link : </label>
-        <input type="text" name="url" class="form-control" [(ngModel)]="iEstablishmentDetails.media[0].url">
+        <div *ngIf="iEstablishmentDetails">
+          <label for="name"> Name :
+            <input type="text" name="name" class="form-control" [(ngModel)]="iEstablishmentDetails.location.name">
+          </label>
+          <label for="city"> City : </label>
+          <input type="text" name="city" class="form-control" [(ngModel)]="iEstablishmentDetails.location.city">
+
+          <label for="zipcode"> Zipcode : </label>
+          <input type="text" name="zipcode" class="form-control" [(ngModel)]="iEstablishmentDetails.location.zipcode">
+
+          <label for="startdate">Start date : </label>
+          <input type="text" name="startdate" class="form-control" [(ngModel)]="iEstablishmentDetails.dates.startdate">
+
+          <label for="urls">Webpage-link : </label>
+          <input type="text" name="urls" class="form-control" [(ngModel)]="iEstablishmentDetails.urls">
+
+          <label for="url"> Picture-Link : </label>
+          <input type="text" name="url" class="form-control" [(ngModel)]="iEstablishmentDetails.media[0].url">
+        </div>
       </div>
     </div>
-  </div>
     <h3 class="headertext">
       <button class="btn btn-primary" (click)="viewAllVenues()">Back to Venues </button>
     </h3>
