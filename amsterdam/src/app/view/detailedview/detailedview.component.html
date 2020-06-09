@@ -1,12 +1,22 @@
 <div class="container">
-  <h3 class="headertext"> SELECT VENUE DETAILS IN AMSTERDAM </h3>
+  <h3 class="headertext"> FULL DETAILS OF SELECTED VENUE IN AMSTERDAM </h3>
   <div class="row form-row">
     <div class="col-12">
       <div class="form-search text-center">
 
         <br>
+        <hr />
+        Image of the Venue
+        <hr />
 
+        <div>
+          <a class="navbar-item">
+            <img alt="Foto (N/A) is absent-1-:" src="iEstablishmentDetails.media[0].url"  height="10%">
+            <img alt="Image not provided-2-:" src="./assets/page1.png" height="10%">
+          </a>          
+        </div>
 
+        <br>
         <label for="name"> Name1: </label>
         <input type="text" name="name" class="form-control" [(ngModel)]="iEstablishmentDetails.location.name">
         <br> <br><br>
@@ -33,16 +43,14 @@
 
       </div>
 
-      <!-- <hr />List Of Images
-      <hr />
-      <div *ngFor="let i of iEstablishmentDetails">
-        <img *ngIf src="{{i.media.url}}" height="33%">
-      </div> -->
-
     </div>
+    <h3 class="headertext">
+      <br>
+      <button class="btn btn-primary" (click)="viewAllVenues()">Back to Venues </button>
+      <br>
+    </h3>
 
     <br><br>
-    <button class="btn btn-primary" (click)="viewAllVenues()">Back to Venues </button>
-    <br><br>
+
   </div>
 </div>

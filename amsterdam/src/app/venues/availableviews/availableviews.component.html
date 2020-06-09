@@ -30,11 +30,7 @@
     </div>
   </div>
 
-  <hr />List Of Images of Venues
-  <hr />
-  <div *ngFor="let i of establishment">
-    <img *ngIf src="{{i.media.url}}" height="33%">
-  </div>
+
 
   <div class="row table-row">
     <div class="col-12">
@@ -42,12 +38,9 @@
         <th> no. </th>
         <th> Name </th>
         <th> City </th>
-        <th> Postcode</th>
-        <th> StartDate</th>
+        <th> Post-code</th>
+        <th> Start-date</th>
         <th> Addres</th>
-        <!-- <th> link</th>
-        <th> picture</th>
-        <th> snap</th> -->
         <th> Action</th>
         <tr *ngFor="let established of establishment | filter: name :zipcode:adress: city ; index as i">
           <td>{{i+1}}</td>
@@ -56,21 +49,15 @@
           <td>{{established.location.zipcode}}</td>
           <td>{{established.dates.startdate}}</td>
           <td>{{established.location.adress}}</td>
-          <!-- <td>{{established.urls[0]}}</td> -->
-          <!-- <td> <img src={{established.media.url}} alt="{{established.trcid}}" /> </td>
-          <td><img [src]="established.media.url" alt="image"></td>  -->
           <td><button class="btn btn-primary" (click)="viewDetails(established)">Estab-Details</button></td>
         </tr>
-        <tr *ngFor="let establish of events | filter: name : city ; index as i">
+        <tr *ngFor="let establish of events | filter: name :zipcode:adress: city ; index as i">
           <td>{{i+1}}</td>
           <td>{{establish.location.name}}</td>
           <td>{{establish.location.city}}</td>
           <td>{{establish.location.zipcode}}</td>
           <td>{{establish.dates.startdate}}</td>
           <td>{{establish.location.adress}}</td>
-          <!-- <td>{{established.urls[0]}}</td> -->
-          <!-- <td> <img src={{established.media.url}} alt="{{established.trcid}}" /> </td>
-          <td><img [src]="established.media.url" alt="image"></td> -->
           <td><button class="btn btn-primary" (click)="viewDetails(establish)">Event-Details</button></td>
         </tr>
 

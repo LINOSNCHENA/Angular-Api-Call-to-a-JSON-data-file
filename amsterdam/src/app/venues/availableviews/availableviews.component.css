@@ -21,4 +21,6 @@ table {
 
 h2.headertext {
     text-align: center;
+    background-color: cyan;
+    margin: 20px;
   }

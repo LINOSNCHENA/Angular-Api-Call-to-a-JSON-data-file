@@ -22,4 +22,6 @@ table {
 
 h3.headertext {
     text-align: center;
+    background-color: cyan;
+    margin: 20px;
   }
