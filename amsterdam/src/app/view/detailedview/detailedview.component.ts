@@ -13,8 +13,10 @@ export class DetailedviewComponent implements OnInit {
   title = 'amsterdam';
   name = '';
   city = '';
-  zipcode = 0;
-  startdate = 0;
+  zipcode = "";
+  adress = "";
+  urls = '';
+  media = '';
 
   iEstablishmentDetails: IEstablishment;  // SINGLE
   establishment: IEstablishment[] = [];   // Multiple
@@ -28,7 +30,7 @@ export class DetailedviewComponent implements OnInit {
   //------------------------------------------
   constructor(private viewdataService: VenuesService, private _router: Router) { }
   ngOnInit() {
-  this.iEstablishmentDetails = this.viewdataService.getter();
+    this.iEstablishmentDetails = this.viewdataService.getter();
     this.viewdataService.getEstablishment().subscribe(
       (dataSet1: any) => {
         this.establishment = dataSet1;
