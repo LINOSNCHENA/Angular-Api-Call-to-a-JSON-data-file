@@ -18,7 +18,7 @@ export class AvailableviewsComponent implements OnInit {
   urls = '';
   media = '';
 
-  private workers: IEstablishment[];// Worker[];
+ //  private workers: IEstablishment[];// Worker[];
   establishment: IEstablishment[] = [];
   events: IEstablishment[] = [];
   totalEstablishment: number;
@@ -36,6 +36,7 @@ export class AvailableviewsComponent implements OnInit {
         this.establishment = dataSet1;
         console.log(this.establishment);
         this.totalEstablishment = this.establishment.length;
+   
       }
     );
 

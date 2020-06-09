@@ -10,7 +10,5 @@ import { IEstablishment } from './model';
 })
 export class AppComponent {
   title = 'amsterdam';
- 
-
 
 }

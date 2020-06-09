@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { DetailedviewComponent } from './view/detailedview/detailedview.component';
 import { Routes, RouterModule } from '@angular/router';
 import { AvailableviewsComponent } from './venues/availableviews/availableviews.component';
+import { FilterPipe } from './pipe/searchPipe';
 
 const appRoutes :Routes = [
   {path : 'enrolls',component: DetailedviewComponent },
@@ -19,7 +20,8 @@ const appRoutes :Routes = [
   declarations: [
     AppComponent,
     DetailedviewComponent,
-    AvailableviewsComponent
+    AvailableviewsComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

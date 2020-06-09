@@ -58,38 +58,43 @@
         <div class="form group">
           <label for="media"> MEDIA-7</label>
           <br>
-          <input type="text" name="media" class="form-control" [(ngModel)]="iEstablishmentDetails.media">
+          <input type="text" name="media" class="form-control"
+           [(ngModel)]="iEstablishmentDetails.media.url">
         </div>
 
       </div>
 
+      <hr />List Of Images
+      <hr />
+      <div *ngFor="let i of establishment">
+        <img *ngIf src="{{i.media.url}}" height="33%">
+      </div>
 
     </div>
     <br><br>
     <button class="btn btn-primary" (click)="viewAllVenues()">Back to Venues #2</button>
   </div>
 
-  <div class="row table-row">
+  <!-- <div class="row table-row">
     <div class="col-12">
       <table class="table-bordered">
-        <th> no. </th>
-        <th> ID </th>
-        <th> Name </th>
-        <th> Zipcode </th>
-        <th> City </th>
-        <th> StartDate</th>
-        <th> Action</th>
-        <tr *ngFor="let established of establishment  ; index as i">
+        <th> no. 1</th>
+        <th> ID 2</th>
+        <th> Name 3</th>
+        <th> Zipcode 4</th>
+        <th> City5 </th>
+        <th> StartDate 6</th>
+        <th> Action 6</th>
+<tr *ngFor="let established of establishment | filter: name : city ; index as i">
           <td>{{i+1}}</td>
-          <td>{{established.trcid}}</td>
+          <td>{{established.urls[0]}}</td>
+          <td> <img src={{established.media.url}} alt="{{established.trcid}}"/></td>
+          <td><img [src]="established.media.url" alt="image"></td>
           <td>{{established.location.name}}</td>
-          <td>{{established.location.zipcode}}</td>
-          <td>{{established.location.city}}</td>
           <td>{{established.dates.startdate}}</td>
           <td> <button class="btn btn-primary" (click)="viewAllVenues()">View Details #1</button> </td>
         </tr>
       </table>
     </div>
 
- <button class="btn btn-primary" (click)="viewAllVenues()">Back to Venues #3</button>
-  </div>
+  </div> -->
