@@ -12,17 +12,17 @@
           <a class="navbar-item">
             <img src="assets/page1.png">
           </a>
-         
+          <br>
+          <p>
+            You have to select a new venue. Please click on the back button below to continue with your selection.
+          </p>
         </div>
         <br> <br>
-        <div>
-          <a class="navbar-item">
-            <img [src]="iEstablishmentDetails?.media[0]?.url" alt="  Click Back to venues to choose a Venue"
-              width="20%">
-          </a>
-        </div>
-
         <div *ngIf="iEstablishmentDetails">
+          <a class="navbar-item">
+            <img [src]="iEstablishmentDetails?.media[0]?.url" alt=" No Image for this Venue" width="20%">
+          </a>
+          <br>
           <label for="name"> Name :
             <input type="text" name="name" class="form-control" [(ngModel)]="iEstablishmentDetails.location.name">
           </label>
