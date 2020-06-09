@@ -8,22 +8,22 @@ import { IEstablishment } from '../model';
 
 export class FilterPipe implements PipeTransform {
 
-    transform(emp2: IEstablishment[], name?: string, city?: string, zipcodeRange?: number) {
+    transform(establishementFound: IEstablishment[], name?: string, city?: string, zipcodeRange?: number) {
         console.log(zipcodeRange);
-        if (!emp2) { return []; }
-        if (!name && !city && !zipcodeRange) { return emp2; }
+        if (!establishementFound) { return []; }
+        if (!name && !city && !zipcodeRange) { return establishementFound; }
         if (name) {
-            emp2 = emp2.filter(establishment => establishment.location
+            establishementFound = establishementFound.filter(establishment => establishment.location
                 .name.toLocaleLowerCase().startsWith(name.toLocaleLowerCase()));
         }
         if (city) {
-            emp2 = emp2.filter(establishment => establishment.location
+            establishementFound = establishementFound.filter(establishment => establishment.location
                 .city.toLocaleLowerCase().startsWith(city.toLocaleLowerCase()));
         }
-     //   if (zipcodeRange) {
-      //      emp2 = emp2.filter(establishment => establishment.dates.startdate >= zipcodeRange * 100);    }
+        //    if (zipcodeRange) {
+        //        establishmentFound = establishmentFound.filter(establishment => establishment.dates.startdate >= zipcodeRange * 100);    }
 
-console.log(emp2)
-        return emp2;
+        console.log(establishementFound)
+        return establishementFound;
     }
 }

@@ -14,11 +14,13 @@
           Start Year:<input type="text" [(ngModel)]="startdate">
         </label>
         <br> <br>
-        <label for="zipcode">
-          ZIPCode:<input type="text" [(ngModel)]="zipcode">
-        </label>
+
         <label for="city">
           City: <input type="text" [(ngModel)]="city">
+
+          <label for="zipcode">
+            ZIPCode:<input type="text" [(ngModel)]="zipcode">
+          </label>
           <br> <br>
           <p>Total Number of Establishments-: {{totalEstablishment}}</p>
           <p>Total Number of Venue Events -: {{totalEvents}}</p>
@@ -37,23 +39,26 @@
   <div class="row table-row">
     <div class="col-12">
       <table class="table-bordered">
-        <th> no.-7 </th>
-        <th> pic1 </th>
-        <th> pic2 </th>
-        <th> Name-5 </th>
-        <th> City-3 </th>
-        <th> StartDate-2</th>
-        <th> website</th>
-        <th> Action-1</th>
-
+        <th> no. </th>
+        <th> Name </th>
+        <th> City </th>
+        <th> Postcode</th>
+        <th> StartDate/startyear</th>
+        <th> Addres</th>
+        <!-- <th> link</th>
+        <th> picture</th>
+        <th> snap</th> -->
+        <th> Action</th>
         <tr *ngFor="let established of establishment | filter: name : city ; index as i">
           <td>{{i+1}}</td>
-          <td> <img src={{established.media.url}} alt="{{established.trcid}}" /> </td>
-          <td><img [src]="established.media.url" alt="image"></td>
           <td>{{established.location.name}}</td>
           <td>{{established.location.city}}</td>
+          <td>{{established.location.zipcode}}</td>
           <td>{{established.dates.startdate}}</td>
-          <td>{{established.urls[0]}}</td>
+          <td>{{established.location.adress}}</td>
+          <!-- <td>{{established.urls[0]}}</td> -->
+          <!-- <td> <img src={{established.media.url}} alt="{{established.trcid}}" /> </td>
+          <td><img [src]="established.media.url" alt="image"></td> -->
           <td><button class="btn btn-primary" (click)="viewDetails(established)">View Details</button></td>
         </tr>
 

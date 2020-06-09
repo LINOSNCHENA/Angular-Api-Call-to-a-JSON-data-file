@@ -4,97 +4,45 @@
     <div class="col-12">
       <div class="form-search text-center">
 
-        <label for="name">
-          <br>
-          Name:<input type="text" [(ngModel)]="name"></label>
-
-        <label for="startdate">
-          Start Year:<input type="text" [(ngModel)]="startdate"></label>
-
-        <br> <br>
-        <label for="zipcode">
-          ZIPCode:<input type="text" [(ngModel)]="zipcode"></label>
-
-        <label for="city">
-          City: <input type="text" [(ngModel)]="city"></label>
-        <br> <br>
+        <br>
 
 
-        <div class="form group">
-          <br>
-          <label for="id"> View for records in database 1</label>
-        </div>
+        <label for="name"> Name1: </label>
+        <input type="text" name="name" class="form-control" [(ngModel)]="iEstablishmentDetails.location.name">
+        <br>    <br><br>
 
-        <div class="form group">
-          <label for="name"> FULL-NAME-2</label>
-          <br>
-          <input type="text" name="name" class="form-control" [(ngModel)]="iEstablishmentDetails.location.name">
-        </div>
+        <label for="city"> City : </label>
+        <input type="text" name="city" class="form-control" [(ngModel)]="iEstablishmentDetails.location.city">
+        <br>    <br><br>
 
-        <div class="form group">
-          <label for="cityx"> CITY-3</label>
-          <br>
-          <input type="text" name="cityx" class="form-control" [(ngModel)]="iEstablishmentDetails.location.city">
-        </div>
+        <label for="zipcode"> Zipcode</label>
+        <input type="text" name="zipcode" class="form-control" [(ngModel)]="iEstablishmentDetails.location.zipcode">
+        <br>    <br><br>
 
-        <div class="form group">
-          <label for="zipcode"> ZIPCODE-4</label>
-          <br>
-          <input type="text" name="zipcode" class="form-control" [(ngModel)]="iEstablishmentDetails.location.zipcode">
-        </div>
+        <label for="startdate">Startdate</label>
+        <input type="text" name="startdate" class="form-control" [(ngModel)]="iEstablishmentDetails.dates.startdate">
+        <br>    <br><br>
 
-        <div class="form group">
-          <label for="startdate">STARTDATE-5</label>
-          <br>
-          <input type="text" name="startdate" class="form-control" [(ngModel)]="iEstablishmentDetails.dates.startdate">
-        </div>
+        <label for="urls">Webpage-link</label>
+        <input type="text" name="urls" class="form-control" [(ngModel)]="iEstablishmentDetails.urls">
+        <br>    <br><br>
 
-        <div class="form group">
-          <label for="urls">URL-6</label>
-          <br>
-          <input type="text" name="urls" class="form-control" [(ngModel)]="iEstablishmentDetails.urls">
-        </div>
-
-        <div class="form group">
-          <label for="media"> MEDIA-7</label>
-          <br>
-          <input type="text" name="media" class="form-control"
-           [(ngModel)]="iEstablishmentDetails.media.url">
-        </div>
+        <label for="media"> Picture-Link</label>
+        <input type="text" name="media" class="form-control" [(ngModel)]="iEstablishmentDetails.media.url">
+        <br>
 
       </div>
 
-      <hr />List Of Images
+      <!-- <hr />List Of Images
       <hr />
-      <div *ngFor="let i of establishment">
+      <div *ngFor="let i of iEstablishmentDetails">
         <img *ngIf src="{{i.media.url}}" height="33%">
-      </div>
+      </div> -->
 
     </div>
+
     <br><br>
-    <button class="btn btn-primary" (click)="viewAllVenues()">Back to Venues #2</button>
+    <button class="btn btn-primary" (click)="viewAllVenues()">Back to Venues </button>
+    <br><br>
   </div>
-
-  <!-- <div class="row table-row">
-    <div class="col-12">
-      <table class="table-bordered">
-        <th> no. 1</th>
-        <th> ID 2</th>
-        <th> Name 3</th>
-        <th> Zipcode 4</th>
-        <th> City5 </th>
-        <th> StartDate 6</th>
-        <th> Action 6</th>
-<tr *ngFor="let established of establishment | filter: name : city ; index as i">
-          <td>{{i+1}}</td>
-          <td>{{established.urls[0]}}</td>
-          <td> <img src={{established.media.url}} alt="{{established.trcid}}"/></td>
-          <td><img [src]="established.media.url" alt="image"></td>
-          <td>{{established.location.name}}</td>
-          <td>{{established.dates.startdate}}</td>
-          <td> <button class="btn btn-primary" (click)="viewAllVenues()">View Details #1</button> </td>
-        </tr>
-      </table>
-    </div>
-
-  </div> -->
+</div>

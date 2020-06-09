@@ -18,22 +18,20 @@ export class AvailableviewsComponent implements OnInit {
   urls = '';
   media = '';
 
- //  private workers: IEstablishment[];// Worker[];
   establishment: IEstablishment[] = [];
   events: IEstablishment[] = [];
   totalEstablishment: number;
   totalEvents: number;
 
-  private iEstablishment: IEstablishment;
 
   constructor(private dataService: VenuesService, private _router: Router) { }
 
   ngOnInit() {
-    this.iEstablishment = this.dataService.getter();
 
     this.dataService.getEstablishment().subscribe(
       (dataSet1: any) => {
         this.establishment = dataSet1;
+        console.log(this.establishment);
         console.log(this.establishment);
         this.totalEstablishment = this.establishment.length;
    
@@ -53,4 +51,5 @@ export class AvailableviewsComponent implements OnInit {
     this.dataService.setter(iEstablishment);
     this._router.navigate(['/enrolls']);
   }
+  
 }

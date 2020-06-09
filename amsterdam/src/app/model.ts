@@ -6,7 +6,7 @@ export interface IEstablishment {  // FOUR ELEMENTS
     name: string;
     city: string;
     zipcode: string;
-  }
+  };
   dates: { startdate: string; };
   urls: any;
   media: {url:any}
