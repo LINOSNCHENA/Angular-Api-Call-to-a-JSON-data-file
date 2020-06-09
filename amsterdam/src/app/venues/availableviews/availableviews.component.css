@@ -18,3 +18,7 @@ table {
     margin-top: 20px; 
     background-color: chartreuse;
 }
+
+h2.headertext {
+    text-align: center;
+  }

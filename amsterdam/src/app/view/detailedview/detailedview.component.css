@@ -18,3 +18,8 @@ table {
     margin-top: 20px; 
     background-color: chartreuse;
 }
+
+
+h3.headertext {
+    text-align: center;
+  }
