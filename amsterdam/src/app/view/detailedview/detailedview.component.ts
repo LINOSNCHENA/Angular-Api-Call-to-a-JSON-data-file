@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { VenuesService } from 'src/app/venues.service';
-import { IEstablishment } from 'src/app/model';
+import { IVenue } from 'src/app/model';
 
 @Component({
   selector: 'app-detailedview',
@@ -10,7 +10,7 @@ import { IEstablishment } from 'src/app/model';
 })
 export class DetailedviewComponent implements OnInit {
 
-  title = 'amsterdam';
+  title = 'OutOfAmsterdam';
   name = '';
   city = '';
   zipcode = "";
@@ -18,17 +18,17 @@ export class DetailedviewComponent implements OnInit {
   urls = '';
   media = '';
 
-  iEstablishmentDetails: IEstablishment;  // SINGLE
-  establishment: IEstablishment[] = [];   // Multiple
+  iEstablishmentDetails: IVenue;  // SINGLE
+  establishment: IVenue[] = [];   // Multiple
 
-  iEvents: IEstablishment;                // Single
-  events: IEstablishment[] = [];          // Multiple
+  iEvents: IVenue;                // Single
+  events: IVenue[] = [];          // Multiple
 
   totalEstablishment: number;
   totalEvents: number;
 
-  //------------------------------------------
   constructor(private viewdataService: VenuesService, private _router: Router) { }
+ 
   ngOnInit() {
     this.iEstablishmentDetails = this.viewdataService.getter();
     this.viewdataService.getEstablishment().subscribe(
@@ -43,12 +43,11 @@ export class DetailedviewComponent implements OnInit {
 
 
   completeForm() {
-    // Test the presence/absence of a record
     if (this.iEstablishmentDetails == undefined) {
       this._router.navigate(['/']);
     }
     else {
-      this.viewdataService.saveOrUpdateItem(this.iEstablishmentDetails)
+      this.viewdataService.updateItem(this.iEstablishmentDetails)
         .subscribe((iEstablishmentDetails) => {
           console.log(iEstablishmentDetails);
           this._router.navigate(['/']);
@@ -57,7 +56,6 @@ export class DetailedviewComponent implements OnInit {
   }
 
   viewAllVenues() {
-    this._router.navigate(['/']);
+     this._router.navigate(['/']);
   }
-
 }

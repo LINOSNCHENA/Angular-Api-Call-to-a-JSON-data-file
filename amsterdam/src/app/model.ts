@@ -1,4 +1,4 @@
-export interface IEstablishment {  // FOUR ELEMENTS
+export interface IVenue {
 
   trcid: string;
   location:
@@ -10,6 +10,6 @@ export interface IEstablishment {  // FOUR ELEMENTS
   };
   dates: { startdate: string; };
   urls: any;
-  media: {url:any}
-  
+  media: { url: any }
+
 }

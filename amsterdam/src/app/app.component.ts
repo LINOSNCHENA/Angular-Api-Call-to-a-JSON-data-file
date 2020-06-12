@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { VenuesService } from './venues.service';
 import { Router } from '@angular/router';
-import { IEstablishment } from './model';
+import { IVenue } from './model';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +9,6 @@ import { IEstablishment } from './model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'amsterdam';
+  title = 'OutOfAmsterdam';
 
 }

@@ -10,10 +10,12 @@ import { DetailedviewComponent } from './view/detailedview/detailedview.componen
 import { Routes, RouterModule } from '@angular/router';
 import { AvailableviewsComponent } from './venues/availableviews/availableviews.component';
 import { FilterPipe } from './pipe/searchPipe';
+import { FilterPipe2 } from './pipe/searchEvents';
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 
-const appRoutes :Routes = [
-  {path : 'enrolls',component: DetailedviewComponent },
-  {path : '',component: AvailableviewsComponent},
+const appRoutes: Routes = [
+  { path: 'enrolls', component: DetailedviewComponent },
+  { path: '', component: AvailableviewsComponent },
 ];
 
 @NgModule({
@@ -21,14 +23,16 @@ const appRoutes :Routes = [
     AppComponent,
     DetailedviewComponent,
     AvailableviewsComponent,
-    FilterPipe
+    FilterPipe,
+    FilterPipe2,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule ,
-    RouterModule.forRoot(appRoutes), FormsModule
+    RouterModule.forRoot(appRoutes), 
+    FormsModule,
+    NgMultiSelectDropDownModule.forRoot()
   ],
   providers: [VenuesService],
   bootstrap: [AppComponent]

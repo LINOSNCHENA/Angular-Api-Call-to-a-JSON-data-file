@@ -1,5 +1,5 @@
 <div class="container">
-  <h3 class="headertext"> FULL DETAILS OF SELECTED VENUE IN AMSTERDAM </h3>
+  <h2 class="headertext"> FULL DETAILS OF SELECTED VENUE IN AMSTERDAM </h2>
   <div class="row form-row">
     <div class="col-12">
       <div class="form-search text-center">
@@ -8,33 +8,35 @@
         <hr /> Image of the Venue
         <hr />
 
-        <div *ngIf="!iEstablishmentDetails">
-          <a class="navbar-item">
-            <img src="assets/page1.png">
+        <div *ngIf="!iEstablishmentDetails" style="align-content: center;">
+          <a class="navbar-item" >
+            <img src="assets/page1.png" >
           </a>
           <br>
           <p>
-            You have to select a new venue. Please click on the back button below to continue with your selection.
+            You have to select a new venue. <br>
+            Please click on the back button below to continue with your selection.
           </p>
         </div>
+
         <br> <br>
         <div *ngIf="iEstablishmentDetails">
           <a class="navbar-item">
             <img [src]="iEstablishmentDetails?.media[0]?.url" alt=" No Image for this Venue" width="20%">
           </a>
-          <br>
+          <br>   
           <label for="name"> Name :
             <input type="text" name="name" class="form-control" [(ngModel)]="iEstablishmentDetails.location.name">
           </label>
           <label for="city"> City : </label>
           <input type="text" name="city" class="form-control" [(ngModel)]="iEstablishmentDetails.location.city">
-
+    
           <label for="zipcode"> Zipcode : </label>
           <input type="text" name="zipcode" class="form-control" [(ngModel)]="iEstablishmentDetails.location.zipcode">
 
           <label for="startdate">Start date : </label>
           <input type="text" name="startdate" class="form-control" [(ngModel)]="iEstablishmentDetails.dates.startdate">
-
+          
           <label for="urls">Webpage-link : </label>
           <input type="text" name="urls" class="form-control" [(ngModel)]="iEstablishmentDetails.urls">
 
@@ -43,9 +45,9 @@
         </div>
       </div>
     </div>
-    <h3 class="headertext">
+    <h2 class="headertext">
       <button class="btn btn-primary" (click)="viewAllVenues()">Back to Venues </button>
-    </h3>
+    </h2>
 
     <br>
   </div>

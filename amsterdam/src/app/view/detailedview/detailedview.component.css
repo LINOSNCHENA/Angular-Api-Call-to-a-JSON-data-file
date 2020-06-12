@@ -19,20 +19,14 @@ table {
     background-color: chartreuse;
 }
 
+input {
+   display: block;
+   background-color: cyan;
+   width: 95%;
+ }
 
-h3.headertext {
+ h2.headertext {
     text-align: center;
     background-color: cyan;
     margin: 20px;
   }
-
-  input {
-    /* box-sizing: border-box; */
-   /* height: 10%;
-   width: 50%; */
-   /* margin-left: 10px; */
-   display: block;
-   /* margin-left: 0 auto; */
-
- 
- }

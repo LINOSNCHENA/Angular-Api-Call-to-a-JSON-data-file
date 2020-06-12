@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IEstablishment } from 'src/app/model';
+import { IVenue } from 'src/app/model';
 import { VenuesService } from 'src/app/venues.service';
 import { Router } from '@angular/router';
 
@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class AvailableviewsComponent implements OnInit {
 
-  title = 'amsterdam';
+  title = 'OutOfAmsterdam';
   name = '';
   city = '';
   zipcode = "";
@@ -18,11 +18,11 @@ export class AvailableviewsComponent implements OnInit {
   urls = '';
   media = '';
 
-  establishment: IEstablishment[] = [];
-  events: IEstablishment[] = [];
+  establishment: IVenue[] = [];
+  events: IVenue[] = [];
+
   totalEstablishment: number;
   totalEvents: number;
-
 
   constructor(private dataService: VenuesService, private _router: Router) { }
 
@@ -34,8 +34,7 @@ export class AvailableviewsComponent implements OnInit {
         console.log(this.establishment);
         console.log(this.establishment);
         this.totalEstablishment = this.establishment.length;
-   
-      }
+         }
     );
 
     this.dataService.getEvents().subscribe(
@@ -51,5 +50,7 @@ export class AvailableviewsComponent implements OnInit {
     this.dataService.setter(iEstablishment);
     this._router.navigate(['/enrolls']);
   }
-  
+  e = []; o = []; selectedPeople = [{ name: 'Karyn Wright' }];
+  clearModel() { this.dataService.getEstablishment; }
+  changeModel() { this.selectedPeople = [{ name: 'New person' }]; }
 }

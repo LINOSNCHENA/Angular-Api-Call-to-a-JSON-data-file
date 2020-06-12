@@ -1,17 +1,17 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { IEstablishment } from './model';
+import { IVenue } from './model';
 import { Observable } from 'rxjs';
 
 @Injectable({
    providedIn: 'root'
 })
 export class VenuesService {
-   saveOrUpdateItem(worker: IEstablishment) {
+   updateItem(venue: IVenue) {
       return this.http.get('assets/establishment-data.json')
    }
 
-   private myEstablishment: IEstablishment;
+   private myEstablishment: IVenue;
    constructor(private http: HttpClient) { }
 
    getEstablishment() {
