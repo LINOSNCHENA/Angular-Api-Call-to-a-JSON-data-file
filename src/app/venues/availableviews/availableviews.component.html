@@ -1,0 +1,69 @@
+<div class="container">
+  <h2 class="headertext"> DATA FOR LOCATING ESTABLISHMENTS AND EVENTS IN AMSTERDAM </h2>
+  <div class="row form-row">
+    <div class="col-12">
+      <div class="form-search text-center">
+
+        <label for="name">
+          <br>
+          Name:<input type="text" [(ngModel)]="name">
+        </label>
+        <label for="adress">
+          Addres:<input type="text" [(ngModel)]="adress">
+        </label>
+        <br> <br>
+
+        <label for="city">
+          City: <input type="text" [(ngModel)]="city">
+
+          <label for="zipcode">
+            ZipCode:<input type="text" [(ngModel)]="zipcode">
+          </label>
+          <br> <br>
+          <p>Total Number of Establishments-: {{totalEstablishment}}</p>
+          <p>Total Number of Venue Events -: {{totalEvents}}</p>
+        </label>
+
+      </div>
+      <div>
+        
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="row table-row">
+    <div class="col-12">
+      <table class="table-bordered">
+        <th> no. </th>
+        <th> Name </th>
+        <th> City </th>
+        <th> Address</th>
+        <th> Startdate</th>
+        <th> Zipcode</th>
+        <th> Action</th>
+        <tr *ngFor="let established of establishment | filter: name : zipcode:adress:city ; index as i">
+          <td>{{i+1}}</td>
+          <td>{{established.location.name}}</td>
+          <td>{{established.location.city}}</td>
+          <!-- <td><img [src]="established.media[0]?.url" alt="image" height="10%"></td> -->
+          <td>{{established.location.adress}}</td>
+          <td>{{established.dates.startdate}}</td>
+          <td>{{established.location.zipcode}}</td>
+          <td><button class="btn btn-primary" (click)="viewDetails(established)">Establishment-Details</button></td>
+        </tr>
+        <tr *ngFor="let event of events | filter: name : zipcode: adress: city; index as i">
+          <td>{{i+1}}</td>
+          <td>{{event.location.name}}</td>
+          <td>{{event.location.city}}</td>
+          <td>{{event.location.adress}}</td>
+          <td>{{event.dates.startdate}}</td>
+          <td>{{event.location.zipcode}}</td>
+          <td><button class="btn btn-primary" (click)="viewDetails(event)">Event-Details</button></td>
+        </tr>
+
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,15 +1,22 @@
-# outOfAmsterdam
+# LIST OF DINNERS IN AMSTERDAM
 
 Events Venues in the city of Amsterdam
 
 
 ## Running application
 
-1. clone the repository onto your machine
-2. run npm install
-3. run ng serve
+Execution of this application use the following command
+
+```
+run npm install
+npm start
+npm stop
+run ng serve
+
+```
 
 ## Pending Issues
+
 1. Testing not complete, time limited
 2. Bonus tasks, requirement not clear
 3. code review
