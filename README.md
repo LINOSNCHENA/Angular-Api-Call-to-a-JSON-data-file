@@ -24,19 +24,18 @@ npm start
 
  Below are some screens shots from the application in development
 
-![ Muntu #1 ](https://github.com/LINOSNCHENA/outOfAmsterdam/blob/master/amsterdam/src/assets/page%20(1).png)
-![ Muntu #2 ](https://github.com/LINOSNCHENA/outOfAmsterdam/blob/master/amsterdam/src/assets/page%20(2).png)
-![ Muntu #3 ](https://github.com/LINOSNCHENA/outOfAmsterdam/blob/master/amsterdam/src/assets/page%20(3).png)
-![ Muntu #4 ](https://github.com/LINOSNCHENA/outOfAmsterdam/blob/master/amsterdam/src/assets/page%20(4).png)
+![ Munt #01 ](https://github.com/LINOSNCHENA/Angular-Api-Call-to-a-JSON-data-file/blob/master/uViews/page1.png)
+![ Munt #02 ](https://github.com/LINOSNCHENA/Angular-Api-Call-to-a-JSON-data-file/blob/master/uViews/page2.png)
+![ Munt #03 ](https://github.com/LINOSNCHENA/Angular-Api-Call-to-a-JSON-data-file/blob/master/uViews/page3.png)
+![ Munt #04 ](https://github.com/LINOSNCHENA/Angular-Api-Call-to-a-JSON-data-file/blob/master/uViews/page4.png)
+![ Munt #05 ](https://github.com/LINOSNCHENA/Angular-Api-Call-to-a-JSON-data-file/blob/master/uViews/page5.png)
+![ Munt #06 ](https://github.com/LINOSNCHENA/Angular-Api-Call-to-a-JSON-data-file/blob/master/uViews/page6.png)
+![ Munt #07 ](https://github.com/LINOSNCHENA/Angular-Api-Call-to-a-JSON-data-file/blob/master/uViews/page7.png)
+![ Munt #08 ](https://github.com/LINOSNCHENA/Angular-Api-Call-to-a-JSON-data-file/blob/master/uViews/page8.png)
+![ Munt #09 ](https://github.com/LINOSNCHENA/Angular-Api-Call-to-a-JSON-data-file/blob/master/uViews/page.png)
+![ Munt #10 ](https://github.com/LINOSNCHENA/Angular-Api-Call-to-a-JSON-data-file/blob/master/uViews/page10.png)
 
-![ Muntu #5 ](https://github.com/LINOSNCHENA/outOfAmsterdam/blob/master/amsterdam/src/assets/page%20(5).png)
-![ Muntu #6 ](https://github.com/LINOSNCHENA/outOfAmsterdam/blob/master/amsterdam/src/assets/page%20(6).png)
-![ Muntu #7 ](https://github.com/LINOSNCHENA/outOfAmsterdam/blob/master/amsterdam/src/assets/page%20(7).png)
-![ Muntu #8 ](https://github.com/LINOSNCHENA/outOfAmsterdam/blob/master/amsterdam/src/assets/page%20(8).png)
-![ Muntu #9 ](https://github.com/LINOSNCHENA/outOfAmsterdam/blob/master/amsterdam/src/assets/page%20(9).png)
-![ Muntu #10 ](https://github.com/LINOSNCHENA/outOfAmsterdam/blob/master/amsterdam/src/assets/page%20(10).png)
-
-## Versioning and Lecture #08
+## Versioning and Lecture # 09
 
 ```
       Name                               Version                  Command to update
